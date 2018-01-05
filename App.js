@@ -5,6 +5,7 @@
  */
 
 import React, { Component } from 'react';
+import Header from './src/components/header'
 import {
   Platform,
   StyleSheet,
@@ -22,17 +23,21 @@ const instructions = Platform.select({
 export default class App extends Component<{}> {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
+      // <View style={styles.container}>
+      //   <Text style={styles.welcome}>
+      //     Welcome to React Native!
+      //   </Text>
+      //   <Text style={styles.instructions}>
+      //     To get started, edit App.js
+      //   </Text>
+      //   <Text style={styles.instructions}>
+      //     {instructions}
+      //   </Text>
+      // </View>
+<View>
+  <Header/>
+</View>
+
     );
   }
 }
