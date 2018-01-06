@@ -17,12 +17,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     height: 60,
     backgroundColor: "#C64848",
-   borderTopRightRadius:4,
-   borderTopLeftRadius:4,
+
   },
   textStyle:{
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: '900',
     color: '#FFFFFF',
 
   }
