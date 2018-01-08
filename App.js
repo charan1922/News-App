@@ -1,16 +1,25 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
+import thunk from 'redux-thunk';
+import {Provider} from 'react-redux' 
+import {createStore,applyMiddleware,compose} from 'redux'
+import rootReducer from './src/reducers'
+
 import Header from "./src/components/header";
 import NewsList from "./src/containers/NewsList";
+
+const store = createStore(rootReducer,compose(applyMiddleware(thunk)));
 
 export default class App extends Component {
   render() {
     return (
+      <Provider store={store}>
       <View style={{flex:1}}>
         <Header />
         <NewsList />
       </View>
+      </Provider>
     );
   }
 }
