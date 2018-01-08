@@ -16,9 +16,9 @@ export default CardSection;
 
 const styles = StyleSheet.create({
     containerStyle: {
-          padding:5,
+          padding:0,
           flexDirection: 'row',
-          borderBottomWidth:1,
+          borderBottomWidth:0,
           borderTopRightRadius:4,
           borderTopLeftRadius:4,
           justifyContent: 'flex-start',

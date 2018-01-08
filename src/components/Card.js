@@ -20,12 +20,12 @@ const styles = StyleSheet.create({
       borderTopLeftRadius:4,
       borderBottomWidth: 0,
       shadowColor: "#000",
-      shadowOffset: { width: 0, height: 2 },
-      shadowOpacity: 0.1,
-      shadowRadius: 2,
-      marginLeft: 2,
-      marginRight: 2,
-      marginTop: 10,
-      elevation: 1
+      shadowOffset: { width: 0, height: 5 },
+      shadowOpacity: 0.2,
+      shadowRadius: 4,
+      marginLeft: 3,
+      marginRight: 3,
+      marginTop: 5,
+      elevation: 2,
     }
   });

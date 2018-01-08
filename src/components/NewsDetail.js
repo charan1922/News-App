@@ -6,7 +6,7 @@ import CardSection from '../components/CardSection'
 
 const NewsDetail =({news})=>{
     const {url,urlToImage,title,source} = news;
-    const {imageStyle,titleTextStyle,titleContentStyle} = styles;
+    const {imageStyle,titleTextStyle,titleContentStyle,webTextStyle} = styles;
 
 return(
 <Card> 
@@ -22,7 +22,7 @@ return(
           onPress={() => Linking.openURL(url).catch(err => console.error('An error occurred', err))}
          
           style={titleTextStyle}>{title}</Text>
-          <Text>{source.name}</Text>
+          <Text style={webTextStyle}>{source.name}</Text>
         </View>
       </CardSection>
 
@@ -34,7 +34,7 @@ export default NewsDetail;
 
 const styles=StyleSheet.create({
     imageStyle: {
-        height: 300,
+        height: 200,
         flex: 1,
         width: null,
         borderTopRightRadius:4,
@@ -42,12 +42,20 @@ const styles=StyleSheet.create({
         
       },
       titleTextStyle: {
-        fontSize: 18,
+        fontSize: 16,
         fontWeight: '600',
-        color:'#000'
+        color:'#433E3E',
+        fontFamily: 'roboto',
+        // margin:8,
       },
       titleContentStyle: {
+        margin:8,
         justifyContent: "space-around"
       },
+      webTextStyle:{
+        margin:6,
+        fontSize: 11,
+        color:"#B7B0B0",
+      }
 
 })
