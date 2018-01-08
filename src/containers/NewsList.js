@@ -2,33 +2,54 @@ import React, { Component } from "react";
 import { View, ScrollView, Text } from "react-native";
 import NewsDetail from "../components/NewsDetail";
 import axios from "axios";
+import { fetchNews } from '../actions/news'; 
+import { connect } from 'react-redux';
+
 
 class NewsList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      news: []
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     news: []
+  //   };
+  // }
 
-  componentWillMount() {
-    axios
-      .get(
-        "https://newsapi.org/v2/everything?q=apple&from=2018-01-04&to=2018-01-04&sortBy=popularity&apiKey=2ebcbf3a75f54c5281683cffa2472656"
-      )
-      .then(response => this.setState({ news: response.data.articles }));
+  // componentWillMount() {
+  //   axios
+  //     .get(
+  //       "https://newsapi.org/v2/everything?q=apple&from=2018-01-04&to=2018-01-04&sortBy=popularity&apiKey=2ebcbf3a75f54c5281683cffa2472656"
+  //     )
+  //     .then(response => this.setState({ news: response.data.articles }));
+  // }
+
+  componentWillMount(){
+    this.props.fetchNews();
   }
 
   renderNews() {
-    return this.state.news.map(news => (
+    console.log(`news in render ${this.props.news.news}`)
+    return this.props.news.map(news =>
+      
+      (
+    
       <NewsDetail key={news.url} news={news} />
-    ));
+      
+    )
+  );
   }
 
   render() {
-    console.log(this.state);
-    return (<ScrollView>{this.renderNews()}</ScrollView>);
+    
+     return (<ScrollView>{this.renderNews()}</ScrollView>);
+   
   }
 }
 
-export default NewsList;
+function mapStateToProps(state){
+  
+    return{
+       news:state.news,
+    };
+}
+
+export default connect(mapStateToProps,{fetchNews})(NewsList);
