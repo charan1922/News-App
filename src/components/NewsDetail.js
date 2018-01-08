@@ -18,7 +18,10 @@ return(
      
      <CardSection>
         <View style={titleContentStyle}>
-          <Text style={titleTextStyle}>{title}</Text>
+          <Text 
+          onPress={() => Linking.openURL(url).catch(err => console.error('An error occurred', err))}
+         
+          style={titleTextStyle}>{title}</Text>
           <Text>{source.name}</Text>
         </View>
       </CardSection>

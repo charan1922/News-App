@@ -27,7 +27,7 @@ class NewsList extends Component {
   }
 
   renderNews() {
-    console.log(`news in render ${this.props.news.news}`)
+    // console.log(`news in render ${this.props.news`)
     return this.props.news.map(news =>
       
       (
