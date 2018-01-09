@@ -2,7 +2,7 @@ import React from 'react'
 import { View,Text,Image,StyleSheet,Linking } from 'react-native'
 import Card from '../components/Card'
 import CardSection from '../components/CardSection'
-
+import CardSection1 from '../components/CardSection1'
 
 const NewsDetail =({news})=>{
     const {url,urlToImage,title,source} = news;
@@ -17,7 +17,7 @@ return(
         source={{uri:urlToImage}}/>
      </CardSection>
      
-     <CardSection>
+     <CardSection1>
         <View style={titleContentStyle}>
           <Text 
           onPress={() => Linking.openURL(url).catch(err => console.error('An error occurred', err))}
@@ -25,7 +25,7 @@ return(
           style={titleTextStyle}>{title}</Text>
           <Text style={webTextStyle}>{source.name}</Text>
         </View>
-      </CardSection>
+      </CardSection1>
 
 </Card>
 );
