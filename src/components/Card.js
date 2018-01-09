@@ -19,13 +19,19 @@ const styles = StyleSheet.create({
       borderTopRightRadius:4,
       borderTopLeftRadius:4,
       borderBottomWidth: 0,
+
       shadowColor: "#000",
-      shadowOffset: { width: 0, height: 5 },
-      shadowOpacity: 0.2,
-      shadowRadius: 4,
+      shadowOffset: { width: 0, height: 3 },
+      shadowOpacity: 1,
+      shadowRadius: 3,
+      
       marginLeft: 3,
       marginRight: 3,
       marginTop: 5,
-      elevation: 2,
+       marginBottom: 1,
+      // paddingBottom: 4,
+      elevation: 4,
+      
+    
     }
   });

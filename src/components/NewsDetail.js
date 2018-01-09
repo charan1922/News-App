@@ -8,6 +8,7 @@ const NewsDetail =({news})=>{
     const {url,urlToImage,title,source} = news;
     const {imageStyle,titleTextStyle,titleContentStyle,webTextStyle} = styles;
 
+  
 return(
 <Card> 
     <CardSection>
@@ -33,6 +34,7 @@ return(
 export default NewsDetail;
 
 const styles=StyleSheet.create({
+  
     imageStyle: {
         height: 200,
         flex: 1,
@@ -45,7 +47,7 @@ const styles=StyleSheet.create({
         fontSize: 16,
         fontWeight: '600',
         color:'#433E3E',
-        fontFamily: 'roboto',
+        // fontFamily: 'roboto',
         // margin:8,
       },
       titleContentStyle: {
@@ -53,7 +55,9 @@ const styles=StyleSheet.create({
         justifyContent: "space-around"
       },
       webTextStyle:{
-        margin:6,
+        // margin:6,
+        marginTop: 6,
+        marginBottom: 6,
         fontSize: 11,
         color:"#B7B0B0",
       }
